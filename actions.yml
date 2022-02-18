@@ -1,18 +1,5 @@
-name: Android Gatenox project
-
-#on: [push]
-
-#env: 
-#    APP_CENTER_APP_NAME: ${{ secrets.APP_CENTER_APP_NAME }}
-#    APP_CENTER_OWNER_NAME: ${{ secrets.APP_CENTER_OWNER_NAME }}
-#    APP_CENTER_TESTERS_GROUP: ${{ secrets.APP_CENTER_TESTERS_GROUP }}
-#    APP_CENTER_TOKEN: ${{ secrets.APP_CENTER_TOKEN }}
-#    VERSION_MAJOR: ${{ secrets.VERSION_MAJOR }}
-#    VERSION_MINOR: ${{ secrets.VERSION_MINOR }}
-#    VERSION_CODE: ${{ secrets.VERSION_PATCH }}
-
+name: build_docker
 
 runs:
     using: 'docker'
     image: 'Dockerfile'
-              
