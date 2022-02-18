@@ -1,18 +1,6 @@
 name: build_android_docker
 description: Docker container with all you need to build android app
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
-jobs:
-
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag android_builder:$(date +%s)
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
