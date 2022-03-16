@@ -1,11 +1,5 @@
 FROM openjdk:11
 
-# Copies your code file from your action repository to the filesystem path `/` of the container
-COPY entrypoint.sh /entrypoint.sh
-
-# Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT ["/entrypoint.sh"]
-
 ENV ANDROID_COMPILE_SDK="30"        \
     ANDROID_BUILD_TOOLS="30.0.3"
 
@@ -30,5 +24,7 @@ RUN apt-get install ruby-full --yes
 RUN apt-get install build-essential --yes
 RUN gem install bundler
 
+RUN wget https://github.com/iterative/dvc/releases/download/2.9.5/dvc_2.9.5_amd64.deb
+RUN apt install ./dvc_2.9.5_amd64.deb
 
 
