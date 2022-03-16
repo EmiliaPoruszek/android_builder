@@ -19,6 +19,7 @@ RUN cd android-sdk-linux/cmdline-tools \
 RUN echo y | sdkmanager --install "platforms;android-${ANDROID_COMPILE_SDK}"
 RUN echo y | sdkmanager --install "platform-tools"
 RUN echo y | sdkmanager --install "build-tools;${ANDROID_BUILD_TOOLS}"
+RUN sdkmanager --install "ndk;23.1.7779620" 
 RUN yes | sdkmanager --licenses
 RUN apt-get install ruby-full --yes
 RUN apt-get install build-essential --yes
