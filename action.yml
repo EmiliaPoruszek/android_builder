@@ -1,6 +1,0 @@
-name: build_android_docker
-description: Docker container with all you need to build android app
-
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
